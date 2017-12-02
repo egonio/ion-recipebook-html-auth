@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth';
 import { RecipesService } from './../services/recipes.service';
 import { ShoppingListService } from './../services/shopping-list';
 import { TabsPage } from './../pages/tabs/tabs';
@@ -12,6 +13,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { EditRecipePage } from '../pages/edit-recipe/edit-recipe';
+import { SigninPage } from '../pages/signin/signin';
+import { SignupPage } from '../pages/signup/signup';
 
 
 @NgModule({
@@ -21,7 +24,9 @@ import { EditRecipePage } from '../pages/edit-recipe/edit-recipe';
     RecipePage,
     RecipesPage,
     ShoppingListPage,
-    TabsPage
+    TabsPage,
+    SigninPage,
+    SignupPage,
 
   ],
   imports: [
@@ -35,7 +40,10 @@ import { EditRecipePage } from '../pages/edit-recipe/edit-recipe';
     RecipePage,
     RecipesPage,
     ShoppingListPage,
-    TabsPage
+    TabsPage,
+    SigninPage,
+    SignupPage,
+
 
   ],
   providers: [
@@ -43,7 +51,8 @@ import { EditRecipePage } from '../pages/edit-recipe/edit-recipe';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ShoppingListService,
-    RecipesService
+    RecipesService,
+    AuthService
   ]
 })
 export class AppModule {}
