@@ -15,6 +15,8 @@ import { MyApp } from './app.component';
 import { EditRecipePage } from '../pages/edit-recipe/edit-recipe';
 import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
+import { SLOptionsPage } from '../pages/shopping-list/sl-options/sl-options';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -27,10 +29,12 @@ import { SignupPage } from '../pages/signup/signup';
     TabsPage,
     SigninPage,
     SignupPage,
+    SLOptionsPage
 
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -43,6 +47,7 @@ import { SignupPage } from '../pages/signup/signup';
     TabsPage,
     SigninPage,
     SignupPage,
+    SLOptionsPage
 
 
   ],
